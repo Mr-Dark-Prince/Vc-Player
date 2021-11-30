@@ -235,11 +235,11 @@ def time_to_seconds(time):
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
-    pablo = await client.send_message(message.chat.id, f"**🔎 Searching..** `{urlissed}`")
+    pablo = await client.send_message(
+        message.chat.id, f"**🔎 Searching..** `{urlissed}`"
+    )
     if not urlissed:
-        await pablo.edit(
-            "Invalid Command Syntax Please Check help Menu To Know More!"
-        )
+        await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
         return
 
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
