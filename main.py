@@ -3,7 +3,6 @@ import asyncio
 from pytgcalls import idle
 
 from config import call_py
-from EvaMaria.quote import arq
 
 
 async def main():
@@ -16,7 +15,6 @@ async def main():
 """
     )
     await idle()
-    await arq.close()
 
 
 loop = asyncio.get_event_loop()
