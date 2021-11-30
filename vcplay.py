@@ -1,6 +1,7 @@
 import asyncio
 import random
 
+from EvaMaria.helpers.queues import QUEUE, add_to_queue, get_queue
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pytgcalls import StreamType
@@ -14,7 +15,6 @@ from pytgcalls.types.input_stream.quality import (
 from youtubesearchpython import VideosSearch
 
 from config import HNDLR, bot, call_py
-from EvaMaria.helpers.queues import QUEUE, add_to_queue, get_queue
 
 MRDARKPRINCE = [
     "https://telegra.ph/file/cbdd8b864c39b394de8f6.jpg",
