@@ -33,6 +33,8 @@ MRDARKPRINCE = [
 IMAGE_THUMBNAIL = random.choice(MRDARKPRINCE)
 
 # music player
+
+
 def ytsearch(query):
     try:
         search = VideosSearch(query, limit=1)
@@ -277,9 +279,7 @@ async def vplay(client, m: Message):
 
     else:
         if len(m.command) < 2:
-            await m.reply(
-                "**Reply to Video File or give something for Search**"
-            )
+            await m.reply("**Reply to Video File or give something for Search**")
         else:
             await m.delete()
             huehue = await m.reply("**🔎 Searching")
