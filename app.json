@@ -1,0 +1,50 @@
+{
+    "name": "EvaMaria",
+    "description": "Telegram UserBot for Video Chat.",
+    "logo": "https://telegra.ph/file/e99fd5f4e72127ed67c65.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/Mr-dark-prince/EvaMaria",
+    "env": {
+        "SESSION": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Your api id from my.telegram.org/apps",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "Set handler",
+            "required": false,
+            "value": "/"
+        },
+        "API_HASH": {
+            "description": "Your api hash from my.telegram.org/apps",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "User ID list user counts as admin everywhere(separator using space)",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
