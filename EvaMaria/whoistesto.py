@@ -41,7 +41,7 @@ def FullName(user: User):
 
 
 @app.on_message(filters.command(["who"], prefixes=f"{HNDLR}"))
-async def whois(client, message):
+async def who(client, message):
     cmd = message.command
     if not message.reply_to_message and len(cmd) == 1:
         get_user = message.from_user.id
@@ -80,7 +80,6 @@ async def whois(client, message):
         )
     else:
         dls = await app.download_media(pfp[0]["file_id"], file_name=f"{user.id}.png")
-        await message.delete()
         await app.send_document(
             message.chat.id,
             dls,
