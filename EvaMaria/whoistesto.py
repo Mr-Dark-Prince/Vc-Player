@@ -5,7 +5,7 @@ from pyrogram.errors import PeerIdInvalid
 from pyrogram.types import Message, User
 
 from config import bot as app
-
+from config import HNDLR
 
 def ReplyCheck(message: Message):
     reply_id = None
