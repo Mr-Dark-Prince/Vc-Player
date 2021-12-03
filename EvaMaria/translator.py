@@ -1,9 +1,11 @@
+from inspect import getfullargspec
+
 from google_trans_new import google_translator
 from pyrogram import filters
-from inspect import getfullargspec
 from pyrogram.types import Message
-from config import bot as app
+
 from config import HNDLR
+from config import bot as app
 
 trl = google_translator()
 
