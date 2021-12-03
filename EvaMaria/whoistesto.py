@@ -1,12 +1,10 @@
 import os
-from datetime import datetime
 
 from pyrogram import filters
-from pyrogram.types import User, InlineKeyboardMarkup, InlineKeyboardButton, Message
-from pyrogram.raw import functions
 from pyrogram.errors import PeerIdInvalid
+from pyrogram.types import Message, User
+
 from config import bot as app
-from config import HNDLR
 
 
 def ReplyCheck(message: Message):
