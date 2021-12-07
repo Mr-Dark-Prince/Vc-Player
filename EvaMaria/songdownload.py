@@ -17,7 +17,7 @@ from yt_dlp import YoutubeDL
 from config import HNDLR
 
 
-@Client.on_message(filters.command(["song", "music"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["dsong", "dmusic"], prefixes=f"{HNDLR}"))
 async def song(client, message: Message):
     urlissed = get_text(message)
     if not urlissed:
@@ -26,7 +26,7 @@ async def song(client, message: Message):
             "⚠️Check spelling!",
         )
         return
-    pablo = await client.send_message(message.chat.id, f"**🔎 Searching** `{urlissed}`")
+    pablo = await client.send_message(message.chat.id, f"**🔎 Searching Song 🌚** `{urlissed}`")
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
     mi = search.result()
     mio = mi["search_result"]
@@ -65,8 +65,8 @@ async def song(client, message: Message):
         return
     c_time = time.time()
     capy = f"""
-**🏷️ Name:** [{thum}]({mo})
-**🎧 Requested by:** {message.from_user.mention}
+**🎙Song Name:** {thum}
+**🗂️Requested by:** {message.from_user.mention}
 """
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
@@ -231,12 +231,12 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(filters.command(["vsong", "video"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["vsong"], prefixes=f"{HNDLR}"))
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"**🔎 Searching..** `{urlissed}`"
+        message.chat.id, f"**🔎 Searching video 🎞..** `{urlissed}`"
     )
     if not urlissed:
         await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
@@ -274,8 +274,8 @@ async def vsong(client, message: Message):
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
-**🏷️ Video :** [{thum}]({mo})
-**🎬 Requested by:** {message.from_user.mention}
+**📽 Video :** {thum}
+**🔎 Requested by:** {message.from_user.mention}
 """
     await client.send_video(
         message.chat.id,
