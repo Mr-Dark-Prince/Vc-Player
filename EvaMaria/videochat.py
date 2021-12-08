@@ -130,7 +130,7 @@ async def play(client, m: Message):
                     photo="https://telegra.ph/file/d6f92c979ad96b2031cba.png",
                     caption=f"""
 **#⃣ Song added▪️Position {pos}
-🏷️ Name: [{songname}]({link})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎧 Requested by: {m.from_user.mention}**
 """,
@@ -150,7 +150,7 @@ async def play(client, m: Message):
                     photo="https://telegra.ph/file/6213d2673486beca02967.png",
                     caption=f"""
 **▶ Playing song
-🏷️ Name: [{songname}]({link})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎧 Requested by: {m.from_user.mention}**
 """,
@@ -181,7 +181,7 @@ async def play(client, m: Message):
                             photo=f"{IMAGE_THUMBNAIL}",
                             caption=f"""
 **#⃣ Song added▪️Position {pos}
-🏷️ Name: [{songname}]({url})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎧 Requested by: {m.from_user.mention}**
 """,
@@ -202,7 +202,7 @@ async def play(client, m: Message):
                                 photo=f"{IMAGE_THUMBNAIL}",
                                 caption=f"""
 **▶ Start Playing Song
-🏷️ Name: [{songname}]({url})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎧 Requested by: {m.from_user.mention}**
 """,
@@ -247,7 +247,7 @@ async def vplay(client, m: Message):
                     photo="https://telegra.ph/file/d6f92c979ad96b2031cba.png",
                     caption=f"""
 **#⃣ Vedio added▪️Position {pos}
-🏷️ Name: [{songname}]({link})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎬 Requested by: {m.from_user.mention}**
 """,
@@ -271,7 +271,7 @@ async def vplay(client, m: Message):
                     photo="https://telegra.ph/file/6213d2673486beca02967.png",
                     caption=f"""
 **▶ Start Playing Video
-🏷️ Name: [{songname}]({link})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎬 Requested by: {m.from_user.mention}**
 """,
@@ -306,7 +306,7 @@ async def vplay(client, m: Message):
                             photo=f"{IMAGE_THUMBNAIL}",
                             caption=f"""
 **#⃣ Vedio added▪️Position {pos}
-🏷️ Name: [{songname}]({url})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎬 Requested by: {m.from_user.mention}**
 """,
@@ -325,7 +325,7 @@ async def vplay(client, m: Message):
                                 photo=f"{IMAGE_THUMBNAIL}",
                                 caption=f"""
 **▶ Start Playing Video
-🏷️ Name: [{songname}]({url})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎬 Requested by: {m.from_user.mention}**
 """,
@@ -374,7 +374,7 @@ async def playfrom(client, m: Message):
                         photo="https://telegra.ph/file/6213d2673486beca02967.png",
                         caption=f"""
 **▶ Start Playing Songs From {chat}
-🏷️ Name: [{songname}]({link})
+🏷️ Name: {songname}
 💬 Chat ID: {chat_id}
 🎧 Requested by: {m.from_user.mention}**
 """,
