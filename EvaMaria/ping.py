@@ -61,7 +61,7 @@ async def restart(client, m: Message):
     quit()
 
 
-@Client.on_message(filters.command(["Good morning"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["Good morning", "gud mrng", "ഗുഡ് മോർണിംഗ്"], prefixes=f"{HNDLR}"))
 async def goodmorning(client, m: Message):
     GM = f"""
 <b>🙋‍♂️ Hallow {m.from_user.mention} 🍂
