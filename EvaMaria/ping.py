@@ -31,7 +31,6 @@ async def _human_time_duration(seconds):
 
 @Client.on_message(filters.command(["ping"], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
-    await m.delete()
     start = time()
     current_time = datetime.utcnow()
     m_reply = await m.reply_text("⚡")
