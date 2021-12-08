@@ -60,3 +60,11 @@ async def restart(client, m: Message):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
+
+@Client.on_message(filters.command(["Good morning"], prefixes=f"{HNDLR}"))
+async def goodmorning(client, m: Message):
+    GM = f"""
+<b>🙋‍♂️ Hallow {m.from_user.mention} 🍂
+🌴Good Morning..⏱️ Have a nice day..🙂</b>
+"""
+    await m.reply(GM)
