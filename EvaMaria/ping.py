@@ -64,16 +64,16 @@ async def restart(client, m: Message):
 @Client.on_message(filters.command(["Good morning", "Gud morning", "gud mrng", "ഗുഡ് മോർണിംഗ്"], prefixes=f"{HNDLR}"))
 async def goodmorning(client, m: Message):
     GM = f"""
-<b>🙋‍♂️ Hallow {m.from_user.mention} 🍂
- ☕️Good Morning..⏱️ Have a nice day..🙂</b>
+<i>🙋‍♂️ Hallow {m.from_user.mention} 🍂
+☕️Good Morning..⏱️ Have a nice day..🙂</i>
 """
     await m.reply(GM)
 
 
 @Client.on_message(filters.command(["Good Evening", "Gud evng", "gud evening", "ഗുഡ് ഈവനിംഗ്", "ഗുഡ് ഈവെനിംഗ്"], prefixes=f"{HNDLR}"))
-async def goodmorning(client, m: Message):
+async def goodevening(client, m: Message):
     GE = f"""
-<b> 🤗Hi {m.from_user.mention} ⚽️
-Good Evening..☕️</b>
+<i>🤗Hi {m.from_user.mention} ⚽️
+Good Evening..☕️</i>
 """
     await m.reply(GE)
