@@ -65,7 +65,7 @@ async def restart(client, m: Message):
 async def goodmorning(client, m: Message):
     GM = f"""
 <b>🙋‍♂️ Hallow {m.from_user.mention} 🍂
-☕️☘️Good Morning..⏱️ Have a nice day..🙂</b>
+ ☕️Good Morning..⏱️ Have a nice day..🙂</b>
 """
     await m.reply(GM)
 
@@ -73,7 +73,7 @@ async def goodmorning(client, m: Message):
 @Client.on_message(filters.command(["Good Evening", "Gud evng", "gud evening", "ഗുഡ് ഈവനിംഗ്", "ഗുഡ് ഈവെനിംഗ്"], prefixes=f"{HNDLR}"))
 async def goodmorning(client, m: Message):
     GE = f"""
-<b>🤸Hi {m.from_user.mention} ⚽️
-🧃Good Evening..🍹🍿</b>
+<b> 🤗Hi {m.from_user.mention} ⚽️
+Good Evening..☕️</b>
 """
     await m.reply(GE)
