@@ -1,6 +1,6 @@
 TgCrypto
 yt-dlp
-git+https://github.com/subinps/pyrogram.git@session
+git+https://github.com/mister-dark-prince/pyrogram.git@session
 py-tgcalls==0.8.1
 requests
 aiohttp
