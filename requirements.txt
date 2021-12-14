@@ -1,6 +1,6 @@
 TgCrypto
 yt-dlp
-git+https://github.com/pyrogram/pyrogram@master
+git+https://github.com/subinps/pyrogram.git@session
 py-tgcalls==0.8.1
 requests
 aiohttp
@@ -13,4 +13,3 @@ youtube-search-python
 python-dotenv
 gTTS
 googletrans==4.0.0rc1
-
