@@ -64,7 +64,7 @@ async def restart(client, m: Message):
 @Client.on_message(filters.command(["Good morning", "Gud morning", "gud mrng", "ഗുഡ് മോർണിംഗ്"], prefixes=f"{HNDLR}"))
 async def goodmorning(client, m: Message):
     GM = f"""
-<i>🍂☕️Good Morning..⏱️ Have a nice day..🙂</i>
+<i>🍂☕️Gøød Mørning..⏱️ Have a nice day..🙂</i>
 """
     await m.reply(GM)
 
@@ -72,7 +72,7 @@ async def goodmorning(client, m: Message):
 @Client.on_message(filters.command(["Good Evening", "Gud evng", "gud evening", "ഗുഡ് ഈവനിംഗ്", "ഗുഡ് ഈവെനിംഗ്"], prefixes=f"{HNDLR}"))
 async def goodevening(client, m: Message):
     GE = f"""
-<i> 😁Good Evening..☕️</i>
+<i> 😁Gøød Evening..☕️</i>
 """
     await m.reply(GE)
 
@@ -80,6 +80,6 @@ async def goodevening(client, m: Message):
 @Client.on_message(filters.command(["Good Night", "Gud nt", "gud night", "ഗുഡ് നൈറ്റ്‌", "gudnyt"], prefixes=f"{HNDLR}"))
 async def goodnight(client, m: Message):
     GN = f"""
-<i> 😴🛌Good Night 🌚</i>
+<i> 😴🛌Gøød Night 🌚</i>
 """
     await m.reply(GN)
