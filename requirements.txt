@@ -1,5 +1,4 @@
 TgCrypto
-yt-dlp
 pyrogram
 py-tgcalls==0.8.2
 requests
