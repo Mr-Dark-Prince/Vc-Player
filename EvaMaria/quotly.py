@@ -4,7 +4,7 @@ from asyncio import sleep
 
 from pyrogram.types import Message
 from pyrogram import Client, filters
-
+from config import HNDLR
 
 @Client.on_message(filters.command(["q"], prefixes=f"{HNDLR}"))
 async def quotly(client, m: Message):
