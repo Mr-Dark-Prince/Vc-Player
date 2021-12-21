@@ -2,7 +2,7 @@
 # Telegram voice, video chat bot
 
 
-## How to get String
+## How To Get String
 [![stringsession](https://img.shields.io/badge/repl.it-generateStringName-yellowgreen)](https://repl.it/@subinps/getStringName)
 
 ## How To Host
