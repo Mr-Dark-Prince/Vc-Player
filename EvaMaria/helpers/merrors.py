@@ -1,6 +1,7 @@
 import sys
 import traceback
 from functools import wraps
+from Music import app
 
 from pyrogram import Client
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
@@ -49,7 +50,7 @@ def capture_err(func):
                 ),
             )
             for x in error_feedback:
-                await Client.send_message(-1001568994954, x)
+                await app.send_message(-1001739603420, x)
             raise err
 
     return capture
