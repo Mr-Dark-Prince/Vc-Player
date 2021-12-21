@@ -12,8 +12,6 @@ async def quotly(client, m: Message):
         await m.edit("🙄Reply to any users text message")
         return
 
-    await m.reply_to_message("```Making a Quote```")
-
     await m.reply_to_message.forward("@QuotLyBot")
 
     is_sticker = False
