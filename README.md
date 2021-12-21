@@ -3,7 +3,7 @@
 
 
 ## How to get String
-[![stringsession](https://img.shields.io/badge/repl.it-generateStringName-orangegreen)](https://repl.it/@subinps/getStringName)
+[![stringsession](https://img.shields.io/badge/repl.it-generateStringName-yellowgreen)](https://repl.it/@subinps/getStringName)
 
 ## How To Host
 The easiest way to deploy this Bot
