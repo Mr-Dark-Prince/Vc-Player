@@ -1,7 +1,7 @@
 import sys
 import traceback
 from functools import wraps
-from Music import app
+from EvaMaria import app
 
 from pyrogram import Client
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
