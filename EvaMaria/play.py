@@ -279,7 +279,7 @@ async def vplay(client, m: Message):
             hmmm = HighQualityVideo()
             if search == 0:
                 await huehue.edit(
-                    "**Tidak Menemukan Apa pun untuk Kueri yang Diberikan**"
+                    "**Didn't Find Anything for the Given Query🤷‍♀️**"
                 )
             else:
                 songname = search[0]
@@ -338,7 +338,7 @@ async def playfrom(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
         await m.reply(
-            f"**PENGGUNAAN:** \n\n`{HNDLR}playfrom [chat_id/username]` \n`{HNDLR}playfrom [chat_id/username]`"
+            f"**Use:** \n\n`{HNDLR}playfrom [chat_id/username]` \n`{HNDLR}playfrom [chat_id/username]`"
         )
     else:
         args = m.text.split(maxsplit=1)[1]
@@ -350,7 +350,7 @@ async def playfrom(client, m: Message):
             limit = 10
             lmt = 9
         await m.delete()
-        hmm = await m.reply(f"🔎 Mengambil {limit} Lagu Acak Dari {chat}**")
+        hmm = await m.reply(f"📥 Take {limit} Random Songs From {chat}**")
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
                 location = await x.download()
@@ -380,7 +380,7 @@ async def playfrom(client, m: Message):
                     )
             await hmm.delete()
             await m.reply(
-                f"➕ Menambahkan {lmt} Lagu Ke Dalam Antrian\n• Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
+                f"➕ Adding {lmt} Songs Into The Queue\n• Click {HNDLR}playlist To View a Playlist**"
             )
         except Exception as e:
             await hmm.edit(f"**ERROR** \n`{e}`")
@@ -394,11 +394,11 @@ async def playlist(client, m: Message):
         if len(chat_queue) == 1:
             await m.delete()
             await m.reply(
-                f"**🎧 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
+                f"**🎧 NOW PLAYING:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 disable_web_page_preview=True,
             )
         else:
-            QUE = f"**🎧 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ DAFTAR ANTRIAN:**"
+            QUE = f"**🎧 NOW PLAYING:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ QUEUE LIST:**"
             l = len(chat_queue)
             for x in range(1, l):
                 hmm = chat_queue[x][0]
@@ -407,4 +407,4 @@ async def playlist(client, m: Message):
                 QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`\n"
             await m.reply(QUE, disable_web_page_preview=True)
     else:
-        await m.reply("**❌ Tidak memutar apapun**")
+        await m.reply("🙄__Doesn't play anything__")
