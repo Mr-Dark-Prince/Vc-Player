@@ -67,13 +67,18 @@ async def skip_item(chat_id, h):
 
 @call_py.on_stream_end()
 async def on_end_handler(_, update: Update):
-    if isinstance(update, StreamAudioEnded) or isinstance(update, StreamVideoEnded):
+    if isinstance(update, StreamAudioEnded):
         chat_id = update.chat_id
         print(chat_id)
         await skip_current_song(chat_id)
 
 
-# Ketika seseorang mengakhiri Obrolan Suara tanpa menghentikan Pemutaran
+@call_py.on_stream_end()
+async def on_end_handler(_, update: Update):
+    if isinstance(update, StreamVideoEnded):
+        chat_id = update.chat_id
+        print(chat_id)
+        await skip_current_song(chat_id)
 
 
 @call_py.on_closed_voice_chat()
