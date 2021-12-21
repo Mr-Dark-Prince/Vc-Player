@@ -28,10 +28,9 @@ jobs:
           black .
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: '`something`'
+          commit_message: '`🥳EvaMaria🍀`'
           commit_options: '--no-verify'
           repository: .
           commit_user_name: Mr-Dark-Prince
           commit_user_email: 73339924+Mr-Dark-Prince@users.noreply.github.com
           commit_author: Mr-Dark-Prince <73339924+Mr-Dark-Prince@users.noreply.github.com>
-
