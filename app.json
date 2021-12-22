@@ -18,7 +18,7 @@
             "required": false
         },
         "HNDLR": {
-            "description": "Set handler",
+            "description": "Set handler... Or blank it for cmdless",
             "required": false,
             "value": ""
         },
