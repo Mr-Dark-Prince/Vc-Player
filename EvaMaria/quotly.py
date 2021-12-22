@@ -29,7 +29,7 @@ async def quotly(client, m: Message):
             progress += random.randint(0, 5)
 
             if progress > 100:
-                await m.reply('There was a long running error')
+                await m.reply_text('There was a long running error')
                 return
 
             try:
