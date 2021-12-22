@@ -20,7 +20,7 @@ async def quotly(client, m: Message):
     while not is_sticker:
         try:
             await sleep(4)
-            msg = await bot.get_history("@QuotLyBot", 1)
+            msg = await client.get_history("@QuotLyBot", 1)
             print(msg)
             is_sticker = True
         except:
@@ -29,7 +29,7 @@ async def quotly(client, m: Message):
             progress += random.randint(0, 5)
 
             if progress > 100:
-                await m.edit('There was a long running error')
+                await m.reply('There was a long running error')
                 return
 
             try:
