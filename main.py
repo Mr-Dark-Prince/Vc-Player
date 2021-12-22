@@ -3,7 +3,7 @@ import asyncio
 from pytgcalls import idle
 
 from config import call_py
-from EvaMaria.Kindi import arq
+from EvaMaria.quote import arq
 
 async def main():
     await call_py.start()
