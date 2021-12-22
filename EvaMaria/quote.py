@@ -45,7 +45,7 @@ async def quotly_func(client, message: Message):
         return await message.reply_text("__🙄Reply To Message To Quote It!__")
     if not message.reply_to_message.text:
         return await message.reply_text(
-            "Pesan yang Dibalas tidak memiliki teks apa pun! Tolong Balas Pesan Teks !"
+            "__Please Reply to Text Messages❗️__"
         )
     m = await message.reply_text("`👸Wait....`")
     if len(message.command) < 2:
