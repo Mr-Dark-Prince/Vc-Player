@@ -15,7 +15,7 @@ def convert(text):
     i = Translator().translate(text, dest="en")
     lang = i.src
     tts = gTTS(text, lang=lang)
-    audio.name = lang + ".mp3"
+    audio.name = lang + ".ogg"
     tts.write_to_fp(audio)
     return audio
 
