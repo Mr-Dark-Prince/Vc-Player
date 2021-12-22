@@ -39,6 +39,6 @@ async def quotly(client, m: Message):
 
     if msg_id := msg[0]['message_id']:
         await asyncio.gather(
-            message.delete(),
-            bot.forward_messages(message.chat.id, "@QuotLyBot", msg_id)
+            m.delete(),
+            client.forward_messages(message.chat.id, "@QuotLyBot", msg_id)
         )
