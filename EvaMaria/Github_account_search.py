@@ -9,7 +9,7 @@ from EvaMaria.helpers.merrors import capture_err
 @capture_err
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("Do 👉{HNDLR}git Username")
+        await message.reply_text("🙄__Give me a valid github username__")
         return
     username = message.text.split(None, 1)[1]
     URL = f"https://api.github.com/users/{username}"
