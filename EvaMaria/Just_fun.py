@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-
+from config import HNDLR
 
 DART_E_MOJI = "🎯"
 
