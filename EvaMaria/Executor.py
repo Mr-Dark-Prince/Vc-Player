@@ -8,7 +8,7 @@ import asyncio
 from getpass import getuser
 from os import geteuid
 from pyrogram import Client, filters
-from EvaMaria.darkprince.tools import telegrapher
+from EvaMaria.darkprince import telegrapher
 
 
 @Client.on_message(
