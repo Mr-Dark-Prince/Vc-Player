@@ -8,4 +8,4 @@ import asyncio
 from getpass import getuser
 from os import geteuid
 from pyrogram import Client, filters
-from EvaMaria.helpers import telegrapher
+from EvaMaria.darkprince import telegrapher
