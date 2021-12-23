@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from pyrogram.errors import FloodWait, MessageNotModified
 from config import HNDLR
 
 DART_E_MOJI = "🎯"
