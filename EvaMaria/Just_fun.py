@@ -2,7 +2,11 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified
 from config import HNDLR
 
+
 DART_E_MOJI = "🎯"
+DICE_E_MOJI = "🎲"
+TRY_YOUR_LUCK = "🎰"
+GOAL_E_MOJI = "⚽"
 
 
 @Client.on_message(filters.command(["throw", "dart"], prefixes=f"{HNDLR}"))
@@ -18,9 +22,6 @@ async def throw_dart(client, message):
     )
 
 
-DICE_E_MOJI = "🎲"
-
-
 @Client.on_message(filters.command(["dice", "roll"], prefixes=f"{HNDLR}"))
 async def roll_dice(client, message):
     rep_mesg_id = message.message_id
@@ -34,9 +35,6 @@ async def roll_dice(client, message):
     )
 
 
-TRY_YOUR_LUCK = "🎰"
-
-
 @Client.on_message(filters.command(["luck"], prefixes=f"{HNDLR}"))
 async def luck_cownd(client, message):
     rep_mesg_id = message.message_id
@@ -48,9 +46,6 @@ async def luck_cownd(client, message):
         disable_notification=True,
         reply_to_message_id=rep_mesg_id
     )
-
-
-GOAL_E_MOJI = "⚽"
 
 
 @Client.on_message(filters.command(["ball", "football"], prefixes=f"{HNDLR}"))
