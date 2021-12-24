@@ -15,7 +15,7 @@ async def pin(_, message: Message):
 
 
 @Client.on_message(filters.command(["unpin", "പിന്നണ്ട"], prefixes=f"{HNDLR}")
-    admin_fliter
+    & admin_fliter
 )
 async def unpin(_, message: Message):
     if not message.reply_to_message:
