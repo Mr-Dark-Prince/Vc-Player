@@ -5,8 +5,7 @@ from EvaMaria.darkprince.custfilters import (
     admin_fliter
 )
 
-@Client.on_message(
-    filters.command(["pin", "പിൻ"], prefixes=f"{HNDLR}")
+@Client.on_message(filters.command(["pin", "പിൻ"], prefixes=f"{HNDLR}")
     & admin_fliter
 )
 async def pin(_, message: Message):
@@ -15,8 +14,7 @@ async def pin(_, message: Message):
     await message.reply_to_message.pin()
 
 
-@Client.on_message(
-    filters.command(["unpin"]) &
+@Client.on_message(filters.command(["unpin", "പിന്നണ്ട"], prefixes=f"{HNDLR}")
     admin_fliter
 )
 async def unpin(_, message: Message):
