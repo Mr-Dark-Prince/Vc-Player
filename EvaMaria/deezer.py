@@ -4,6 +4,7 @@ from random import randint
 import aiofiles
 import aiohttp
 from pyrogram import Client, filters
+from config import HNDLR
 
 ARQ = "https://thearq.tech/"
 
