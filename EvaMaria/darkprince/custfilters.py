@@ -4,7 +4,7 @@ from pyrogram import (
 from config import (
     SUDO_USERS
 )
-from EvaMaria.darkprince.admin_check import admin_check
+from EvaMaria.darkprince.admincheck import admin_check
 
 
 def f_sudo_filter(filt, client, message):
