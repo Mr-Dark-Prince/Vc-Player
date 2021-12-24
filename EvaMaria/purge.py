@@ -7,8 +7,8 @@ from EvaMaria.darkprince.custfilters import f_onw_fliter
 TG_MAX_SELECT_LEN = 100
 
 @Client.on_message(
-    filters.command("purge") &
-    f_onw_fliter
+    filters.command(["purge", "ഡിലീറ്റ്"], prefixes="!")
+    & f_onw_fliter
 )
 async def purge(client, message):
     """ purge upto the replied message """
